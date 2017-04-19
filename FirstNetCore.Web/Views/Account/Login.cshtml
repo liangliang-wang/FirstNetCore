@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+@model FirstNetCore.Model.User.UserInfo
+<body>
+    @using (Html.BeginForm())
+    {
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>UserName</td>
+                <td>@Html.TextBoxFor(m => m.UserName)</td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>@Html.PasswordFor(m => m.Password)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button>Login</button></td>
+            </tr>
+        </table>
+    }
+</body>

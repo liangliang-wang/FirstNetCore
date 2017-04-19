@@ -13,16 +13,34 @@ using System.Threading.Tasks;
 
 namespace FirstNetCore.Web
 {
-    //public class AuthorizeFilterAttribute : AuthorizeAttribute, IAsyncAuthorizationFilter
-    //{
-    //    public virtual async Task OnAuthorizationAsync(AuthorizationFilterContext filterContext)
-    //    {
-    //        List<string> roles = Roles.Split(',').ToList();
-    //        IIdentity identity =  filterContext.HttpContext.User.Identity;
-    //        if (roles.Contains(AuthorizationHelper.PublicRole))
-    //        {
-    //            return ;
-    //        }
-    //    }
-    //}
+    public class AuthorizeFilterAttribute : AuthorizeAttribute, IAuthorizationFilter
+    {
+        public AuthorizeFilterAttribute()
+        {
+            Roles = Roles ?? string.Empty;
+        }
+        public virtual void OnAuthorization(AuthorizationFilterContext filterContext)
+        {
+            if (string.IsNullOrWhiteSpace(Roles))
+            {
+                return;
+            }
+            List<string> roles = Roles.Split(',').ToList();
+            IIdentity identity = filterContext.HttpContext.User.Identity;
+            if (roles.Contains(AuthorizationHelper.PublicRole))
+            {
+                return;
+            }
+            var token = filterContext.HttpContext.Request.Cookies[Constant.AccessToken];
+            if (token != null && !string.IsNullOrEmpty(token))
+            {
+                return;
+            }
+            //var returnUri = filterContext.HttpContext.Request.;
+           // filterContext.HttpContext.Response.Redirect("/Account/Login");
+            filterContext.HttpContext.Response.Redirect("/Home/AuthPage");
+            return;
+            //filterContext.Result = new HttpUnauthorizedResult();
+        }
+    }
 }

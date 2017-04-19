@@ -21,6 +21,12 @@
     <EmbeddedResource Remove="SolutionItems\**" />
     <None Remove="SolutionItems\**" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Authorize\IAsyncAuthorizationFilter.cs" />
+    <Compile Remove="Authorize\OauthService.cs" />
+    <Compile Remove="Authorize\OnAuthorizationAsync.cs" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
@@ -31,6 +37,10 @@
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FirstNetCore.Contexts\FirstNetCore.Contexts.csproj" />
+    <ProjectReference Include="..\FirstNetCore.Model\FirstNetCore.Model.csproj" />
   </ItemGroup>
   <ProjectExtensions><VisualStudio><UserProperties bower_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
 

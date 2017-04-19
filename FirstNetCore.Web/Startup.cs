@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using System.IO;
-using System.Security.Claims;
 
 namespace FirstNetCore.Web
 {
@@ -38,12 +34,11 @@ namespace FirstNetCore.Web
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddMvc();
-            //services.AddAuthorization(options =>
-            //{
-            //    options.AddPolicy("Over21",
-            //                      policy => policy.Requirements.Add(new MinimumAgeRequirement(21)));
-            //});
+            services.AddMvc(config =>
+            {
+                config.Filters.Add(typeof(AuthorizeFilterAttribute));
+            });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

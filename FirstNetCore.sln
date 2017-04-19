@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstNetCore.Web", "FirstNe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstNetCore.Contexts", "FirstNetCore.Contexts\FirstNetCore.Contexts.csproj", "{1A40FEAD-9AAC-4EAD-866E-5660CA3119BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstNetCore.Model", "FirstNetCore.Model\FirstNetCore.Model.csproj", "{77376ACB-50BC-4D0E-97A7-96E3DD544C73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{1A40FEAD-9AAC-4EAD-866E-5660CA3119BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A40FEAD-9AAC-4EAD-866E-5660CA3119BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A40FEAD-9AAC-4EAD-866E-5660CA3119BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77376ACB-50BC-4D0E-97A7-96E3DD544C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77376ACB-50BC-4D0E-97A7-96E3DD544C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77376ACB-50BC-4D0E-97A7-96E3DD544C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77376ACB-50BC-4D0E-97A7-96E3DD544C73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
