@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstNetCore.Contexts", "Fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstNetCore.Model", "FirstNetCore.Model\FirstNetCore.Model.csproj", "{77376ACB-50BC-4D0E-97A7-96E3DD544C73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstNetCore.Common", "FirstNetCore.Common\FirstNetCore.Common.csproj", "{5B871344-A5A2-4856-BD15-C52B5DEAF958}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{77376ACB-50BC-4D0E-97A7-96E3DD544C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77376ACB-50BC-4D0E-97A7-96E3DD544C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77376ACB-50BC-4D0E-97A7-96E3DD544C73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B871344-A5A2-4856-BD15-C52B5DEAF958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B871344-A5A2-4856-BD15-C52B5DEAF958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B871344-A5A2-4856-BD15-C52B5DEAF958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B871344-A5A2-4856-BD15-C52B5DEAF958}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

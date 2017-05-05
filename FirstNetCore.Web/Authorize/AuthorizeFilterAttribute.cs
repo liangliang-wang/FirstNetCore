@@ -37,8 +37,8 @@ namespace FirstNetCore.Web
                 return;
             }
             //var returnUri = filterContext.HttpContext.Request.;
-           // filterContext.HttpContext.Response.Redirect("/Account/Login");
-            filterContext.HttpContext.Response.Redirect("/Home/AuthPage");
+            // filterContext.HttpContext.Response.Redirect("/Account/Login");
+            //filterContext.HttpContext.Response.Redirect("/Home/AuthPage");
             return;
             //filterContext.Result = new HttpUnauthorizedResult();
         }

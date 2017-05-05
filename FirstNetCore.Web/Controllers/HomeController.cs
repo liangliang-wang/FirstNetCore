@@ -31,8 +31,7 @@ namespace FirstNetCore.Web.Controllers
             return View();
         }
 
-        [Authorize(Roles = AuthorizationHelper.LoginRole)
-            ]
+        [Authorize(Roles = AuthorizationHelper.LoginRole)]
         public ContentResult Test()
         {
             return Content("王亮test001");

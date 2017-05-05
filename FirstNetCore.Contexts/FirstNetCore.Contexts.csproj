@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NETCore.MailKit" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Selenium.WebDriverBackedSelenium">
       <HintPath>..\SolutionItems\Selenium.WebDriverBackedSelenium.dll</HintPath>
     </Reference>
