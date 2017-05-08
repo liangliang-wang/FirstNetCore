@@ -1,2 +1,2 @@
 # FirstNetCore
-My first .Net Core MVC project
+FirstNetCore is My first .Net Core MVC project
